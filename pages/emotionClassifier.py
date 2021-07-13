@@ -131,21 +131,7 @@ def app():
                 st.session_state.occurence[index_emotion] += 1
 
                 d_pie = {'Emotion': st.session_state.emotions, 'Occurence': st.session_state.occurence}
-                df_pie = pd.DataFrame(d_pie)
-                # st.write("Emotion Occurence")
-                # st.write(df_pie)
-
-
-                # df_occur = {'Emotion': prdcts, 'Occurence': occur['Emotion']}
-                # st.write(df_occur)
-
-                
-
-                # Line chart
-                # c = alt.Chart(df).mark_line().encode(x='Date',y='Probability')
-                # st.altair_chart(c)
-
-                
+                df_pie = pd.DataFrame(d_pie)                
 
                 col3, col4 = st.beta_columns(2)
                 with col3:
