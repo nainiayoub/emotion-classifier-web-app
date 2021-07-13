@@ -161,7 +161,7 @@ def app():
 
                 # Pie chart
                 import plotly.express as px
-                st.write("Probabily of total predicted emotions")
+                st.write("Probabily of total classified emotions")
                 fig = px.pie(df_pie, values='Occurence', names='Emotion')
                 st.write(fig)
 
