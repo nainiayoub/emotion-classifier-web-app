@@ -131,7 +131,21 @@ def app():
                 st.session_state.occurence[index_emotion] += 1
 
                 d_pie = {'Emotion': st.session_state.emotions, 'Occurence': st.session_state.occurence}
-                df_pie = pd.DataFrame(d_pie)                
+                df_pie = pd.DataFrame(d_pie)
+                # st.write("Emotion Occurence")
+                # st.write(df_pie)
+
+
+                # df_occur = {'Emotion': prdcts, 'Occurence': occur['Emotion']}
+                # st.write(df_occur)
+
+                
+
+                # Line chart
+                # c = alt.Chart(df).mark_line().encode(x='Date',y='Probability')
+                # st.altair_chart(c)
+
+                
 
                 col3, col4 = st.beta_columns(2)
                 with col3:
@@ -147,7 +161,7 @@ def app():
 
                 # Pie chart
                 import plotly.express as px
-                st.write("Probabily of total classified emotions")
+                st.write("Probabily of total predicted emotions")
                 fig = px.pie(df_pie, values='Occurence', names='Emotion')
                 st.write(fig)
 
