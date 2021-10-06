@@ -36,7 +36,7 @@ def sumy_summarizer(docx):
 def app():
 
     st.write("""
-    # Text to speech
+    # Translation (text to speech)
     There are several APIs available to convert text to speech in Python. 
     One of such APIs is the Google Text to Speech API commonly known as the gTTS API.
 
@@ -69,22 +69,22 @@ def app():
     filename = 'speech.mp3'
     col1, col2 = st.beta_columns(2)
 
-    
-    # Select box
-    language = st.selectbox('Speech Language', page_names)
-    speech_lang = language
-    language = langs[language]
+    with col1:
+        # Select box
+        language = st.selectbox('Speech Language', page_names)
+        speech_lang = language
+        language = langs[language]
 
-    # with col2:
-    #     # Text translation
-    #         from google_trans_new import google_translator 
-    #         from textblob import TextBlob
+    with col2:
+        # Text translation
+            from google_trans_new import google_translator 
+            from textblob import TextBlob
             
-    #         filename_translated = "translation.mp3"
+            filename_translated = "translation.mp3"
             
-    #         translation_lang = st.selectbox('Choose translation language', help='Choose the language you want to translate the speech to', options=page_names)
-    #         full_lang = translation_lang
-    #         translation_lang = langs[translation_lang]
+            translation_lang = st.selectbox('Choose translation language', help='Choose the language you want to translate the speech to', options=page_names)
+            full_lang = translation_lang
+            translation_lang = langs[translation_lang]
 
     # Input
     text = st.text_area("Enter your text")
@@ -94,13 +94,13 @@ def app():
         audio_created = save_audio(text, language, slow_audio_speed, filename)
         read_audio(filename)
         
-        # Translation
-        # if st.button(f"Translate in {full_lang}"):
-        #     translator = google_translator()
-        #     text_output = translator.translate(text, lang_src=language, lang_tgt=translation_lang)
-        #     st.success(text_output)
-        #     save_audio(text_output, translation_lang, slow_audio_speed, filename_translated)
-        #     read_audio(filename_translated)
+        #Translation
+        if st.button(f"Translate in {full_lang}"):
+            translator = google_translator()
+            text_output = translator.translate(text, lang_tgt=translation_lang)
+            st.success(text_output)
+            save_audio(text_output, translation_lang, slow_audio_speed, filename_translated)
+            read_audio(filename_translated)
 
         # # Tokenize
         # if st.button("Tokenize"):
