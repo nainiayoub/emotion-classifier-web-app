@@ -38,14 +38,14 @@ def app():
 
     with st.form(key='emotion_clf_form'):
         text = st.text_area("Type here")
-        submit = st.form_submit_button(label='Submit')
+        submit = st.form_submit_button(label='Classify text emotion')
     
     if submit:
         
 
         if text:
             st.write(f"{text}")
-            col1, col2 = st.beta_columns(2)
+            col1, col2 = st.columns(2)
             # output prediction and proba
             prediction = predict_emotion(text)
             datePrediction = datetime.now()
@@ -147,7 +147,7 @@ def app():
 
                 
 
-                col3, col4 = st.beta_columns(2)
+                col3, col4 = st.columns(2)
                 with col3:
                     st.write("Emotion Occurence")
                     st.write(df_pie)
