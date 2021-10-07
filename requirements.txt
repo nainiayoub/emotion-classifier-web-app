@@ -157,7 +157,6 @@ py==1.10.0
 pyarrow==4.0.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-PyAudio @ file:///C:/Users/hp/Desktop/text-speech-speak/PyAudio-0.2.11-cp39-cp39-win_amd64.whl
 pybase64==1.1.4
 pycld2 @ file:///C:/Users/hp/Documents/M-DataScience/projects/navbar/packs/pycld2-0.41-cp39-cp39-win_amd64.whl
 pycountry==20.7.3
