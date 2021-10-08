@@ -55,12 +55,12 @@ def app():
         'Spanish': 'es'
     }
 
-    model = {
-        'English': 'en_core_web_sm',
-        'French': 'fr_core_news_sm',
-        'Portuguese': 'pt_core_news_sm',
-        'Spanish': 'es_core_news_sm'
-    }
+    # model = {
+    #     'English': 'en_core_web_sm',
+    #     'French': 'fr_core_news_sm',
+    #     'Portuguese': 'pt_core_news_sm',
+    #     'Spanish': 'es_core_news_sm'
+    # }
 
 
     page_names = list(langs.keys())
