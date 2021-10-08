@@ -67,7 +67,7 @@ def app():
     # Text to speech parameters
     slow_audio_speed = False
     filename = 'speech.mp3'
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
 
     with col1:
         # Select box
