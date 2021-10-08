@@ -1,5 +1,5 @@
 # Emotion text classifier web app (with Streamlit)
-**Streamlit version 0.84.0**
+**Streamlit version 1.0.0**
 ## Features
 The text emotion classification Logistic Regression project facets:
 * Text to Speech (Using GTTS API) 
