@@ -5,8 +5,8 @@ import speech_recognition as sr
 from speech_recognition import AudioData
 from textblob import TextBlob
 from langdetect import detect
-import spacy_streamlit
-from spacy_cld import LanguageDetector
+# import spacy_streamlit
+# from spacy_cld import LanguageDetector
 # gensim
 # from gensim.Summarization import summarize
 # summy
@@ -14,7 +14,7 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
 
-import spacy
+# import spacy
 import base64
 import time
 
@@ -87,22 +87,22 @@ def app():
             href = f'<a href="data:file/txt;base64,{b64}" download = "{new_filename}"> Download text </a>'
             st.markdown(href, unsafe_allow_html=True)
         
-        def text_analyzer(text):
-            nlp = spacy.load("en_core_web_sm")
-            docx = nlp(text)
-            tokens = [token.text for token in docx]
-            allData = [('"Tokens":{},\n"Lemma":{}'.format(token.text, token.lemma_)) for token in docx]
+        # def text_analyzer(text):
+        #     nlp = spacy.load("en_core_web_sm")
+        #     docx = nlp(text)
+        #     tokens = [token.text for token in docx]
+        #     allData = [('"Tokens":{},\n"Lemma":{}'.format(token.text, token.lemma_)) for token in docx]
             
-            return allData
+        #     return allData
         
-        def entity_analyzer(text):
-            nlp = spacy.load("en_core_web_sm")
-            docx = nlp(text)
-            tokens = [token.text for token in docx]
-            entities = [(entity.text, entity.label_) for entity in docx.ents]
-            allData = [('"Tokens":{},\n"Entities":{}'.format(token, entities)) for token in docx]
+        # def entity_analyzer(text):
+        #     nlp = spacy.load("en_core_web_sm")
+        #     docx = nlp(text)
+        #     tokens = [token.text for token in docx]
+        #     entities = [(entity.text, entity.label_) for entity in docx.ents]
+        #     allData = [('"Tokens":{},\n"Entities":{}'.format(token, entities)) for token in docx]
 
-            return allData
+        #     return allData
 
         if fileUp :
             

@@ -4,8 +4,8 @@ from PIL import Image
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
-import spacy
-import spacy_streamlit
+# import spacy
+# import spacy_streamlit
 
 
 # To run your app: streamlit run first_app.py
