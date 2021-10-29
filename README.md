@@ -5,7 +5,13 @@
 
 Emotion classification attempts to detect the emotional content in the input text and based on different approaches establish what kind of emotional content is present, if any. Textual emotion classification relies mainly on linguistic resources and it introduces many challenges to assignment of text to emotion represented by a proper model. A crucial part of each emotion detector is emotion model.
 
-
+* [App features](#features)
+* [Project development](#project-development)
+  * [Data preparation](#data-preparation)
+  * [Text cleaning](#text-cleaning)
+  * [Model building](#model-building)
+* [Project demo](#demo)
+* [Extras and Mentions](#extras-and-mentions)   
 
 # Features
 The text emotion classification Logistic Regression project facets:
@@ -41,3 +47,6 @@ The linear regression pipeline that was created takes as an argument a vectorize
 
 # Demo
 [Project Demo](https://user-images.githubusercontent.com/50157142/136587178-028af373-503e-4b25-a107-196260630448.mp4)
+
+# Extras and Mentions
+This emotion classifier web application was included in the [Weekly Roundup on the Streamlit community forum under NLP and Language](https://discuss.streamlit.io/t/weekly-roundup-new-docs-site-clean-speech-audio-leafmap-apps-and-more/18094#nlp-and-language-7).
