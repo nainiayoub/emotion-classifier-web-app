@@ -232,7 +232,7 @@ tokenizers==0.10.2
 toml==0.10.2
 toolz==0.11.1
 torch==1.8.1
-tornado==6.1
+tornado==6.5.1
 tqdm==4.49.0
 traitlets==5.0.5
 transformers==4.5.1
